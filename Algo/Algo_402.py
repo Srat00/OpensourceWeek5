@@ -26,7 +26,7 @@ while True:
         
     elif menu == Menu.Peek:
         value = stack.peek()
-        print('가장 위쪽 데이터는 {}입니다.'.format(value))
+        print('가장 위 데이터는 {}입니다.'.format(value))
         
     elif menu == Menu.Clear:
         stack.clear()
@@ -35,14 +35,16 @@ while True:
     elif menu == Menu.Find:
         value = int(input('찾을 데이터를 입력하세요 >>  '))
         result = stack.find(value)
+        
         if result == -1:
             print('찾는 데이터가 없습니다.')
         else:
-            print('찾는 데이터는 {}번째에 있습니다.'.format(result))
+            print('찾는 데이터는 {}번 인덱스에 있습니다.'.format(result))
             
     elif menu == Menu.Count:
         value = int(input('개수를 셀 데이터를 입력하세요 >>  '))
         result = stack.count(value)
+        
         if result == 0:
             print('스택에 {}은(는) 없습니다.'.format(value))
         else:
